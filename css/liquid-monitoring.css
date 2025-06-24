@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+ background-color: #111827;
+  /* color: #1f2937; */
+}
+
+/* Offset below navbar */
+.liquid-header {
+  margin-top: 64px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main container for image and overlay */
+.liquid-image-box {
+  position: relative;
+  width: 1000px; /* Optional: fixed width */
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Image styling */
+.liquid-image {
+  width: 60%; /* Make it left aligned with space */
+  height: 90%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Text block sits beside the image but overlaps slightly */
+.liquid-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  padding-left: 40px;
+  padding-right: 20px;
+  width: 50%;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Heading styles */
+.liquid-title {
+  font-size: 4rem;
+  margin: 0;
+  color: #00b09c;
+}
+
+.liquid-subtitle {
+  font-size: 2rem;
+  margin-top: 8px;
+  color: #374151;
+}
+
+
+
+
+.liquid-overview {
+  padding: 20px 20px;
+  background-color: #f9fafb;
+}
+
+.liquid-overview .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.liquid-overview h2 {
+  font-size: 2rem;
+  color: #00b09c;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.liquid-overview p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #374151;
+  font-weight: 400;
+}
+
+
+
+
+.eqms-need {
+  background-color: #ffffff;
+  padding: 20px 20px;
+}
+
+.eqms-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.eqms-content {
+  flex: 1 1 500px;
+  order: 0;
+}
+
+.eqms-content h2 {
+  font-size: 2rem;
+  color: #00b09c;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.eqms-content ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #374151;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+
+.eqms-image {
+  flex: 1 1 400px;
+  order: 1;
+  text-align: right;
+}
+.eqms-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

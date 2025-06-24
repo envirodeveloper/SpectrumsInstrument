@@ -1,0 +1,49 @@
+@media only screen and (max-width: 768px) {
+  .contact-header {
+    height: 250px;
+  }
+
+  .contact-overlay h1 {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .contact-info,
+  .contact-details,
+  .contact-form {
+    padding: 16px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .container p,
+  li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .image-grid {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .image-grid img {
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    font-size: 0.95rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+background-color: #111827;
+  /* color: #1f2937; */
+}
+
+.aboutus-header {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f7fa;
+  position: relative;
+}
+
+/* .aboutus-image-wrapper {
+  position: relative;
+  width: 900px;
+  height: 500px;
+} */
+
+.aboutus-image {
+  width: 900px;
+  height: 500px;
+  object-fit: cover;
+  clip-path: polygon(
+    0% 0%,
+    90% 0%,     /* top-right cut */
+    100% 10%,
+    100% 100%,
+    10% 100%,   /* bottom-left cut */
+    0% 90%
+  );
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.aboutus-heading-vertical {
+  position: absolute;
+  top: 50%;
+  right: 100px; /* half outside image */
+  transform: translateY(-50%);
+ -webkit-writing-mode: vertical-rl;
+  -webkit-text-orientation: mixed;
+  font-size: 60px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: 3px;
+  z-index: 2;
+}
+
+
+
+.aboutus-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.aboutus-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  /* color: #5025d1; */
+  color: #00b09c;
+}
+
+.aboutus-paragraph {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .aboutus-header img {
+    width: 200px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+
+  .aboutus-title {
+    font-size: 28px;
+  }
+
+  .aboutus-paragraph {
+    font-size: 16px;
+  }
+}

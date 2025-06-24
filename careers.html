@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="/images/logo/specturm-favicon.png"
+      type="image/png"
+    />
+    <title>Careers | Spectrums Instrument</title>
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/careers.css" />
+    <link rel="stylesheet" href="/css/phone/careers.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Header Section -->
+    <section class="career-header">
+      <img
+        src="/images/careers/careers.webp"
+        alt="Career Banner"
+        class="career-image"
+      />
+      <div class="career-overlay">
+        <h1>Join Our Team</h1>
+      </div>
+    </section>
+
+    <!-- Description Section -->
+    <section class="career-description">
+      <div class="container">
+        <p>
+          At Spectrums Instrument, we believe innovation begins with people. We
+          are constantly on the lookout for talented individuals passionate
+          about technology and sustainability. Join us in building solutions
+          that matter and contribute to a cleaner, smarter future.
+        </p>
+        <p>
+          To apply, please mail your resume to:
+          <strong>info@spectrumsinstrument.com</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="career-form">
+      <div class="container">
+        <h2>Apply Now</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required />
+
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            name="phone"
+            maxlength="10"
+            pattern="[0-9]{10}"
+            required
+            placeholder="Phone Number"
+          />
+
+          <label for="qualification">Qualification</label>
+          <input type="text" id="qualification" name="qualification" required />
+
+          <label for="resume">Upload Resume</label>
+          <input
+            type="file"
+            id="resume"
+            name="resume"
+            accept=".pdf,.doc,.docx"
+            required
+          />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Load shared navbar and footer -->
+    <script src="../javascript/common.js"></script>
+    <script src="/javascript/career.js" defer></script>
+
+
+
+    <script>
+  const phoneInput = document.querySelector('input[name="phone"]');
+  phoneInput.addEventListener("input", () => {
+    phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 10); // Only numbers, max 10
+  });
+</script>
+
+  </body>
+</html>

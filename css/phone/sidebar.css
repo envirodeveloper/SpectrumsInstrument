@@ -1,0 +1,63 @@
+@media (max-width: 768px) {
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100vh;
+  background-color: #1f2937;
+  z-index: 998;
+  transition: right 0.3s ease;
+  padding: 80px 20px 20px;
+  display: block;
+}
+
+.mobile-sidebar.active {
+  right: 0;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 10px;
+}
+
+.sidebar-links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 12px 16px;
+  font-weight: 500;
+}
+
+.sidebar-dropdown .arrow {
+  font-size: 10px;
+  margin-left: 6px;
+}
+
+/* Submenu inside sidebar */
+.sidebar-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: #2c3e50;
+  border-left: 2px solid #00cba9;
+  list-style: none;       /* ✅ REMOVE BULLETS */
+  padding-left: 0;    
+}
+
+.sidebar-submenu li {
+  list-style: none;        /* ✅ ENSURE bullets are gone for li too */
+}
+
+.sidebar-submenu li a {
+  padding-left: 32px;
+}
+
+.sidebar-dropdown.active .sidebar-submenu {
+  max-height: 500px;
+}
+}

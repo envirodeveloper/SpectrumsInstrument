@@ -1,0 +1,119 @@
+@media (max-width: 768px) {
+  /* Hero Section */
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 15px;
+  }
+
+  .hero-content {
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  }
+
+  .hero-text{
+    flex: 0;
+  }
+
+.hero-title {
+  font-size: 28px;
+  margin-bottom: 0.5rem; /* Add this if there is too much default margin */
+}
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-image{
+    flex: 1;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+    border-radius: 16px;
+  }
+
+  /* About Us Section */
+  .about-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .about-paragraph {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .highlight-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Technology Section */
+  .tech-heading {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .tech-intro {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .tech-card h3 {
+    font-size: 18px;
+  }
+
+  .tech-card p,
+  .tech-card ul li {
+    font-size: 14px;
+  }
+
+  .tech-tagline h4 {
+    font-size: 20px;
+  }
+
+  .tech-tagline p {
+    font-size: 14px;
+  }
+
+  /* Solutions Section */
+  .solutions-heading {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .solutions-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .solution-card {
+    max-width: 100%;
+  }
+
+  .solution-card h3 {
+    font-size: 18px;
+  }
+
+  .solution-card p {
+    font-size: 15px;
+  }
+
+  .solution-link {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,41 @@
+@media only screen and (max-width: 768px) {
+  .career-header {
+    height: 250px;
+    margin-top: 56px;
+  }
+
+  .career-overlay {
+    padding: 10px;
+  }
+
+  .career-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .career-description {
+    padding: 30px 16px;
+  }
+
+  .career-description .container {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .career-form {
+    padding: 40px 16px;
+  }
+
+  .career-form h2 {
+    font-size: 1.5rem;
+  }
+
+  input, textarea {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}

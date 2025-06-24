@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spectrum Instruments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111b27;
+      padding: 12px 24px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      height: 48px;
+      width: 150px;
+    }
+
+    .menu-toggle {
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+      display: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color: white;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      min-width: 250px;
+      padding: 10px 0;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .submenu li a {
+      color: #1f2937;
+      text-decoration: none;
+      display: block;
+      padding: 10px 20px;
+    }
+
+    .dropdown:hover .submenu {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        background-color: #1f2937;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 250px;
+        padding: 80px 20px;
+        transition: right 0.3s ease;
+        align-items: flex-start;
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links li a {
+        width: 100%;
+        display: block;
+        color: white;
+        padding: 12px 16px;
+      }
+
+      .dropdown:hover .submenu {
+        display: none;
+      }
+
+      .dropdown .submenu {
+        position: static;
+        background-color: #2c3e50;
+        padding: 0;
+      }
+
+      .dropdown.active .submenu {
+        display: block;
+      }
+
+      .submenu li a {
+        padding-left: 30px;
+        color: white;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="/"><img src="/images/logo/Spectrums.png" alt="Spectrum Logo" class="logo" /></a>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about-us.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Solutions</a>
+        <ul class="submenu">
+          <li><a href="/solutions/liquid-monitoring-system.html">Liquid Monitoring System</a></li>
+          <li><a href="/solutions/ambient-air-monitoring-system.html">Air Monitoring System</a></li>
+          <li><a href="/solutions/continuous-emission-monitoring-system.html">Emission Monitoring System</a></li>
+        </ul>
+      </li>
+      <li><a href="/careers.html">Careers</a></li>
+      <li><a href="/contact-us.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', function (e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          this.parentElement.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+@media only screen and (max-width: 768px) {
+  .liquid-header {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .liquid-image-box {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0 16px;
+  }
+
+  .liquid-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .liquid-text-overlay {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: transparent;
+  }
+
+  .liquid-title {
+    font-size: 2rem;
+  }
+
+  .liquid-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .liquid-overview,
+  .eqms-need {
+    padding: 20px 16px;
+  }
+
+  .liquid-overview h2,
+  .eqms-content h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .liquid-overview p,
+  .eqms-content ul {
+    font-size: 1rem;
+  }
+
+  .eqms-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .eqms-content {
+    order: 1;
+    text-align: center;
+  }
+
+  .eqms-image {
+    order: 0;
+    text-align: center;
+  }
+
+  .eqms-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .eqms-content ul {
+    padding-left: 16px;
+    text-align: left;
+  }
+}

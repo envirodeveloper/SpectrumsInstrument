@@ -1,0 +1,40 @@
+@media only screen and (max-width: 768px) {
+  .aboutus-header {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .aboutus-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    clip-path: none; /* Disable polygon clipping for small screens */
+    box-shadow: none;
+  }
+
+  .aboutus-heading-vertical {
+    position: static;
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    font-size: 36px;
+    margin-top: 20px;
+    color: #111827;
+    transform: none;
+    letter-spacing: 2px;
+  }
+
+  .aboutus-section {
+    padding: 20px;
+    margin: 30px 0;
+  }
+
+  .aboutus-title {
+    font-size: 28px;
+  }
+
+  .aboutus-paragraph {
+    font-size: 16px;
+  }
+}

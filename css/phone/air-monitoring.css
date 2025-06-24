@@ -1,0 +1,75 @@
+@media only screen and (max-width: 768px) {
+  .air-header {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .air-image-box {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .air-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .air-text-overlay {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 20px 10px;
+    background: #ffffff;
+    text-align: center;
+  }
+
+  .air-title {
+    font-size: 2rem;
+  }
+
+  .air-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .air-overview,
+  .aaqms-need {
+    padding: 20px 15px;
+  }
+
+  .air-overview h2,
+  .aaqms-content h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .air-overview p,
+  .aaqms-content ul {
+    font-size: 1rem;
+  }
+
+  .aaqms-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .aaqms-content,
+  .aaqms-image {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .aaqms-content ul {
+    padding-left: 15px;
+    list-style-type: disc;
+    text-align: left;
+  }
+
+  .aaqms-image img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+}

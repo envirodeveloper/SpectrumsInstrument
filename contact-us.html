@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/images/logo/specturm-favicon.png" type="image/png" />
+  <title>Contact Us | Spectrums Instrument</title>
+  <link rel="stylesheet" href="/css/navbar.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/css/contact-us.css" />
+    <link rel="stylesheet" href="/css/phone/contact-us.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Header -->
+  <section class="contact-header">
+    <!-- <img src="/images/contact-us/contact-us.avif" alt="Contact Spectrums Instrument" class="contact-banner" /> -->
+    <div class="contact-overlay">
+      <h1>Get in Touch</h1>
+    </div>
+  </section>
+
+  <!-- Company Info -->
+  <section class="contact-info">
+    <div class="container">
+      <h2>Who We Are</h2>
+      <p>
+        Spectrums Instrument is a leader in environmental and process instrumentation solutions. We specialize
+        in real-time monitoring systems for water, air, emissions, and industrial processes. Our mission is to
+        empower industries with reliable, innovative tools for sustainable operations.
+      </p>
+      <div class="image-grid">
+        <img src="/images/contact-us/office.webp" alt="Office 1">
+        <img src="/images/contact-us/lab.webp" alt="Lab Environment">
+        <img src="/images/contact-us/site-monitoring.webp" alt="On-Site Monitoring">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Details -->
+  <section class="contact-details">
+    <div class="container">
+      <h2>Contact Information</h2>
+      <ul>
+      <li><strong>Email:</strong>
+        <a href="mailto:info@spectrumsinstrument.com">info@spectrumsinstrument.com</a> ||
+        <a href="mailto:customersupport@spectrumsinstrument.com">customersupport@spectrumsinstrument.com</a>
+      </li>
+      <li><strong>Phone:</strong>
+        <a href="tel:+917208698430">+91 72086 98430</a>
+      </li>
+      <li><strong>Address:</strong> Mumbai, Maharashtra, India</li>
+      <li><strong>Working Hours:</strong> Mon–Sat, 9:30 AM – 6:00 PM</li>
+    </ul>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form">
+    <div class="container">
+      <h2>Send Us a Message</h2>
+      <form action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- JS -->
+  <script src="../javascript/common.js"></script>
+    <script >
+
+        document.querySelector("form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  try {
+    const res = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    const text = await res.text(); // always read as text
+    let data;
+
+    try {
+      data = JSON.parse(text);
+    } catch (jsonErr) {
+      console.error("Server response was not JSON:", text);
+      throw new Error("Invalid JSON response from server.");
+    }
+
+    if (data.success) {
+      alert("Message sent successfully!");
+      e.target.reset();
+    } else {
+      alert("Failed to send: " + data.message);
+    }
+  } catch (error) {
+    console.error("Contact form error:", error);
+    alert("Error sending message. Try again.");
+  }
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+@media only screen and (max-width: 768px) {
+  .cems-header {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .cems-image-box {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .cems-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .cems-text-overlay {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: transparent;
+    color: #ffffff;
+  }
+
+  .cems-title {
+    font-size: 2rem;
+  }
+
+  .cems-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .cems-overview,
+  .cems-need {
+    padding: 30px 15px;
+  }
+
+  .cems-overview h2,
+  .cems-content h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .cems-overview p,
+  .cems-content ul {
+    font-size: 1rem;
+  }
+
+  .cems-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .cems-content,
+  .cems-image-side {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .cems-image-side img {
+    width: 100%;
+    height: auto;
+  }
+}

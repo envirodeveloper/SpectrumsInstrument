@@ -1,0 +1,9 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /
+
+rewritecond %{http_host} ^spectrumsinstrument.com [nc]
+rewriterule ^(.*)$ http://www.spectrumsinstrument.com/$1 [r=301,nc]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ http://www.spectrumsinstrument.com/ [R=301,L]
