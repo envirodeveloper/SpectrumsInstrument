@@ -84,6 +84,24 @@ input, textarea {
   outline: none;
 }
 
+input[type="file"] {
+  background-color: #f0f4f8;      /* Light gray background */
+  color: #1f2937;                 /* Dark text for visibility */
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+
+input[type="file"]:hover,
+input[type="file"]:focus {
+  border-color: #00b09c;
+  outline: none;
+}
+
+
 button {
   margin-top: 20px;
   padding: 12px;
@@ -99,4 +117,22 @@ button {
 
 button:hover {
   background-color: #019283;
+}
+
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid #00b09c;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

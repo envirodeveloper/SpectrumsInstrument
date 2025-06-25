@@ -12,8 +12,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111b27;
-  padding: 12px 24px;
+  /* background-color: #111b27; */
+    background-color:white;
+  padding: 8px 24px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -28,7 +29,7 @@ body {
 
 .logo {
   height: 48px;
-  width: 150px;
+  width: 165px;
 }
 
 .nav-links {
@@ -39,7 +40,7 @@ body {
 }
 
 .nav-links li a {
-  color: white;
+  color: #111b27;
   text-decoration: none;
   font-weight: 500;
   position: relative;
@@ -69,7 +70,7 @@ body {
 .menu-toggle {
   display: none;
   font-size: 28px;
-  color: white;
+  color: black;
   cursor: pointer;
   z-index: 1001;
 }

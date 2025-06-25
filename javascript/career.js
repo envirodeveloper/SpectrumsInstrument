@@ -1,40 +1,47 @@
 
-console.log("Career JS loaded");
-
 document.querySelector("form").addEventListener("submit", async function (e) {
   e.preventDefault();
-  console.log("Form submitted");
 
   const form = e.target;
+  const submitBtn = document.getElementById("career-submit-btn");
+  const submitText = document.getElementById("career-submit-text");
+  const spinner = document.getElementById("career-spinner");
+
+  // Show spinner, hide text
+  submitBtn.disabled = true;
+  submitText.style.display = "none";
+  spinner.style.display = "inline-block";
+
   const formData = new FormData(form);
 
   try {
-    console.log("Sending fetch...");
-
-    const res = await fetch("http://localhost:5000/api/careers", {
+    const res = await fetch("https://spectrumsinstrument.onrender.com/api/careers", {
       method: "POST",
-      mode: "cors",
       body: formData,
     });
 
-    console.log("Fetch response received:", res);
+    const text = await res.text();
+    let data;
 
-    if (!res.ok) {
-      throw new Error(`HTTP error! status: ${res.status}`);
+    try {
+      data = JSON.parse(text);
+    } catch {
+      throw new Error("Invalid JSON response");
     }
-
-    const data = await res.json();
-    console.log("Server response:", data);
 
     if (data.success) {
       alert("Application submitted successfully!");
-      console.log("application submitted", data.success)
-      // form.reset();
+      form.reset();
     } else {
-      alert("Failed: " + data.message);
+      alert("Failed to submit: " + data.message);
     }
-  } catch (error) {
-    console.error("Career form error:", error.message);
-    alert("Something went wrong: " + error.message);
+  } catch (err) {
+    console.error("Career form error:", err);
+    alert("An error occurred. Please try again.");
+  } finally {
+    // Restore button
+    submitBtn.disabled = false;
+    submitText.style.display = "inline";
+    spinner.style.display = "none";
   }
 });

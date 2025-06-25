@@ -4,7 +4,6 @@ const Career = require("../models/Career");
 const upload = require("../middleware/upload");
 const nodemailer = require("nodemailer");
 
-
 console.log("Career form hit");
 
 router.post("/", upload.single("resume"), async (req, res) => {
